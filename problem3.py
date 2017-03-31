@@ -172,13 +172,13 @@ dt_params = {'max_depth': range(1, 51, 1), 'min_samples_split': range(2, 11)}
 decision_tree = DecisionTreeClassifier(max_depth=range(1, 51, 1), min_samples_split=range(2, 11))
 random_forest = RandomForestClassifier(max_depth=range(1, 51, 1), min_samples_split=range(2, 11))
 method_params = [
-        #{'method': 'svm_linear', 'estimator': svc, 'params': {'C': C, 'kernel': ['linear']}},
-        #{'method': 'svm_rbf', 'estimator': svc, 'params': {'C': C, 'gamma':  [0.1, 0.5, 1, 3, 6, 10], 'kernel': ['rbf']}},
+        {'method': 'svm_linear', 'estimator': svc, 'params': {'C': C, 'kernel': ['linear']}},
+        {'method': 'svm_rbf', 'estimator': svc, 'params': {'C': C, 'gamma':  [0.1, 0.5, 1, 3, 6, 10], 'kernel': ['rbf']}},
         {'method': 'svm_poly', 'estimator': svc, 'params': {'C': [0.1, 1, 3], 'degree':[4, 5, 6], 'gamma':[0.1, 1], 'kernel': ['poly']}}
-        #{'method': 'logistic', 'estimator': log_regression, 'params': {'C': C}},
-        #{'method': 'knn', 'estimator': knn, 'params': {'n_neighbors': np.arange(1, 51, 1)}},
-        #{'method': 'decision_tree', 'estimator': decision_tree, 'params': dt_params},
-        #{'method': 'random_forest', 'estimator': random_forest, 'params': dt_params},
+        {'method': 'logistic', 'estimator': log_regression, 'params': {'C': C}},
+        {'method': 'knn', 'estimator': knn, 'params': {'n_neighbors': np.arange(1, 51, 1)}},
+        {'method': 'decision_tree', 'estimator': decision_tree, 'params': dt_params},
+        {'method': 'random_forest', 'estimator': random_forest, 'params': dt_params},
 
     ]
 
