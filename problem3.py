@@ -226,7 +226,7 @@ for mp in method_params:
     scores = cross_val_score(estimator, X_test, y_test)
     print scores.mean()
     estimator.fit(X_train, y_train)
-    plt = plot_learning_curve(estimator, title, X_train, y_train, cv=5)
+    #plt = plot_learning_curve(estimator, title, X_train, y_train, cv=5)
     #plot_decision_boundary(X, y, estimator, plt)
 
     line = '%s,%.3f,%.3f' % (mp.get('method'), svm_clf.clf.best_score_, scores.mean())
