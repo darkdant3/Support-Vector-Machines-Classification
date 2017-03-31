@@ -230,5 +230,6 @@ for mp in method_params:
 
     line = '%s,%.3f,%.3f' % (mp.get('method'), svm_clf.clf.best_score_, scores.mean())
     output.write(line + "\n")
+    output.flush()
 output.close()
-plt.show()
+#plt.show()
